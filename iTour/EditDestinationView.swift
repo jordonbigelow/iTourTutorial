@@ -55,8 +55,10 @@ struct EditDestinationView: View {
     }
     
     func deleteSight(_ indexSet: IndexSet) {
-        for index in indexSet {
-            destination.sights.remove(at: index)
+        withAnimation {
+            for index in indexSet {
+                destination.sights.remove(at: index)
+            }
         }
     }
 }
